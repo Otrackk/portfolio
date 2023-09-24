@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Tinos&display=swap');
+
+html {
+    background-color: #212529;
+}
+
+#main-container {
+    height: 100vh;
+}
+
+/* ----- NAVBAR ----- */
+
+.point {
+    cursor: pointer;
+}
+
+#curriculum-pic {
+    width: 250px;
+    border-radius: 50%;
+    border: 10px solid white;
+    object-fit: cover;
+    object-position: top;
+    height: 250px;
+}
+
+li {
+    list-style-type: none;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hover-eff::after {
+    content: "";
+    background: white;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.hover-eff {
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: larger;
+}
+
+.hover-eff:hover::after {
+    height: calc(100% + 8px)
+}
+
+/* CARD CONTENT */
+
+.code-editor {
+    max-width: 300px;
+    background-color: #1d1e22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.title {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+}
+
+.editor-content {
+    margin: 0 10px 10px;
+    color: white;
+}
+
+.property {
+    margin-left: 30px;
+}
+
+.property:hover {
+    cursor: text;
+}
+
+.editor-content .color-0 {
+    color: rgb(86 156 214);
+}
+
+.editor-content .color-1 {
+    color: rgb(182 206 168);
+}
+
+.editor-content .color-2 {
+    color: rgb(156 220 254);
+}
+
+.editor-content .color-3 {
+    color: rgb(207 146 120);
+}
+
+.color-4 {
+    color: white;
+}
+
+.color-preview-1,
+.color-preview-2 {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.color-preview-1 {
+    background-color: #1d1e22;
+}
+
+.color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ----- FOOTER ----- */
+
+#today-greeting {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+
+.i-am-size {
+    text-align: start;
+}
+
+
+/* ----- ANIMATIONS ----- */
+
+.fade-in-card {
+    animation: fade-in-cards 1.5s;
+}
+
+@keyframes fade-in-cards {
+    from {
+        opacity: 0;
+        left: 200px;
+        position: relative;
+    }
+
+    to {
+        opacity: 1;
+        left: 0;
+        position: relative;
+    }
+}
+
+.fade-in-nav {
+    animation: fade-in-nav 1s;
+}
+
+@keyframes fade-in-nav {
+    from {
+        top: 150px;
+        opacity: 0;
+        right: 200px;
+        position: relative;
+    }
+
+    to {
+        top: 0px;
+        opacity: 1;
+        right: 0;
+        position: relative;
+    }
+}
+
+.fade-in-greeting {
+    animation: fade-in-greet 20s;
+}
+
+@keyframes fade-in-greet {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-icons {
+    animation: fade-in-ic 2s;
+}
+
+@keyframes fade-in-ic {
+    from {
+
+        opacity: 0;
+        right: 600px;
+        position: relative;
+    }
+
+    to {
+        opacity: 1;
+        right: 0;
+        position: relative;
+    }
+}
+
+.i-am-animation {
+    animation: fade-in-iam 3s infinite;
+}
+
+@keyframes fade-in-iam {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ----- FORCED QUERY ----- */
+
+@media screen and (max-width:768px) {
+    #about-me-card {
+        border-bottom: 1px solid white !important;
+        border-right: none !important;
+    }
+}
+
+@media screen and (max-width:884px) {
+    #curriculum-pic {
+        display: none;
+    }
+
+    #navbar-hap {
+        display: flex;
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #container-cards-mobile-tweak{
+        padding: 0 !important;
+        padding-right: 0 !important;
+        font-size: 11px;
+    }
+
+    .hover-eff{
+        font-size: 20px !important;
+    }
+
+    #main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

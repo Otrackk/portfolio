@@ -138,6 +138,7 @@ a {
 #today-greeting {
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
+    text-align: center;
 }
 
 .i-am-size {
@@ -257,17 +258,17 @@ a {
 }
 
 @media screen and (max-width:500px) {
-    #container-cards-mobile-tweak{
+    #container-cards-mobile-tweak {
         padding: 0 !important;
         padding-right: 0 !important;
         font-size: 11px;
     }
 
-    .hover-eff{
+    .hover-eff {
         font-size: 20px !important;
     }
 
-    #main-container{
+    #main-container {
         display: flex;
         flex-direction: column;
         align-items: center;

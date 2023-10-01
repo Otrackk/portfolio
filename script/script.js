@@ -24,8 +24,6 @@ setInterval(function () {
 
 }, 3000);
 
-
-
 //ANIMATION SCRIPT
 
 var navBar = document.getElementById("navigation-bar");
